@@ -13,6 +13,7 @@ interface Card {
   description: string;
   url: string;
   ts: number;
+  id: string;
 }
 
 interface CardProps {
@@ -21,7 +22,7 @@ interface CardProps {
 }
 
 export function Card({ data, viewImage }: CardProps): JSX.Element {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <Box key={data.ts} borderRadius="md" bgColor="pGray.800">
